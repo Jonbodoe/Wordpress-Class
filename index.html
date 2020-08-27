@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://raw.githack.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.css" rel="stylesheet">
+
+    <style>
+        /* INSTRUCTIONS: 
+1. The client wants the image to bleed full width, the text in the paragraphs to be 80% 
+of the browser window (but wants a smaller margin on mobile) and wants the code to 
+be semantically correct.  
+
+2. First link the bootstrap-reboot.css file (from the URL below) within the head
+of this file.
+
+3. Begin to build a semantic structure for the page that allows the
+image to go full width but the text to have a margin from the edge of
+the browser. 
+
+4. 
+a.) Wrap everything within the body in a main element, 
+b.) create two section elements within it, 
+c.) put the full width image in the first section, 
+d.) put the paragraphs within a div in the second section
+e.) write a rule that sets the paragraphs off from the edge of the browser via 
+a class you create and add to this div.
+f.) write a media query to change the div's width to be larger at a mobile size. 
+*/
+
+        .designcenter {
+            width: 100%;
+            height: auto;
+        }
+
+        .mockup {
+            margin: auto;
+            width: 100%;
+            max-width: 600px;
+            display: block;
+        }
+        .padding {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80vw;
+        }
+        @media only screen and (max-width: 600px) {
+
+    .padding {
+        width: 100vw;
+    }
+  
+}
+    </style>
+    <title>Don't forget to change the title</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <img src="https://robfromerd.github.io/images/designcenter1600.jpg" class="designcenter">
+        </section>
+        <section>
+            <div class="padding">
+                <h1>The heading</h1>
+
+                <p>Browsers have a default margin of 8 pixels on the body element. (If you inspect the body
+                    element, you will see the "user agent stylesheet" sets the body to have an 8px margin.)
+                    However, the client wants the image of the design center to bleed full width
+                    with the text's line length limited at a desktop view.</p>
+
+                <p>They even gave you
+                    a mockup they made in Figma:</p>
+                <p><img src="https://robfromerd.github.io/images/figmamockupforweek1.jpg" alt="mockup" class="mockup">
+                </p>
+
+                <p>What to do? See the instructions in the comment within the style block.</p>
+
+                <h2>Background</h2>
+                <p>Working developers today do not write a whole bunch of
+                    browser default rules. Instead they use a pre-made set of rules <a
+                        href="https://raw.githack.com/twbs/bootstrap/v4-dev/dist/css/bootstrap-reboot.css">like this one
+                        from
+                        Bootstrap</a>.
+
+                <p><a href="https://codepen.io/robfromerd/pen/BaKpeBe">Here is a Codepen example</a>
+                    of different ways of starting out with either a reboot or
+                    "normalized" version of these pesky browser resets.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
