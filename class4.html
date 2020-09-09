@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<!-- INSTRUCTIONS (once saved to your computer as a .html file):
+1. In this exercise, we want the image to be inline with the words in the paragraph NOT breaking to a new line. 
+2. If you do not have Firefox installed, install it from https://www.mozilla.org/en-US/firefox/
+3. Open this file in Firefox and right-click to "inspect element" on the logo image. 
+4. Notice over in the MIDDLE PANE of the window that pops up, you will see a rule: vertical-align: middle
+	
+5. Hover over the little "i" icon to the right of this rule - THIS will tell you what is WRONG with this page.
+ 
+6. We want the image to be inline with the words in the paragraph NOT breaking to a new line. 
+7. Click on the little "i" icon and then click the "Learn more" link to go a website that will tell you how to fix this problem. 
+8. Fix the problem, push it up your Github repository, and DM me the link to complete the assignment. 
+-->
+	
+	<meta charset="utf-8">
+	<title>FF DEV TOOLS DEMO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+        width:100px;
+        height:auto;
+        display:inline; /*FOR ANOTHER REASON THIS RULE HAS OVERRIDEN THE NORMAL INLINE DISPLAY ATTRIBUTE OF IMG */
+        }
+    	.align-me {
+        vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+	<main>
+
+<p>This is a paragraph. <img class="align-me" src="https://www.jefferson.edu/content/dam/academic/logos/new-logo.svg"> with some more words.</p>
+      
+    </main>
+	<script type="text/javascript" src=""></script>
+</body>
+
+</html>
