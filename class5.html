@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- INSTRUCTIONS:
+1. The client likes the dropdown menus but has noticed that top left and top right 
+borders have a radius on them. Inspect this in browser dev tools 
+    TO FIX, inspect the UL with a class of "show" and look for a triangle icon
+that will reveal the change you have to make to fix this issue. 
+2. The client has given you the feedback that when the menu items wrap to two lines at a 
+narrower window  width, "the dropdown menus are too far up."
+    To FIX this, inspect this page in Chrome, click the "toggle device toolbar" icon in the
+    upper left of the inspector window (looks like a phone). Then choose "Responsive" at the
+    top of the device toolbar view - this gives you a grabber on the right to move
+    the window in or out and fields at the top for direct input of values.  This will let 
+    you POPULATE the missing values that I replaced with XXX in the media query below. 
+3. The client also wants the "border to disappear on the drop-down menu on mobile and for
+the top margin of this dropdown to not be so large on mobile." 
+    To FIX, this add a rule in the supplied media query. 
+-->
+    <title>Title Goes Here</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+        nav {
+            border-bottom: 1px solid rgba(0, 0, 0, .15);
+        }
+        nav ul.show {
+            background: #f8f9fa;
+            margin-top: 23px;
+            border-top: none;
+            border-radius: 0rem 0rem .25rem .25rem;
+        }
+        
+        main {
+            margin-top: 87px;
+        }
+
+        /* fix the mobile view */
+
+        @media (max-width:767px) {
+            nav ul.show {
+                margin-top: 0px;
+                border: none;
+            }
+        }
+
+        /* a fix the inbetween view */
+        @media (min-width:768px) and (max-width:833px) {
+            nav ul.show {
+                margin-top:35px;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+
+         <!-- Navigation -->
+  <nav class="navbar navbar-expand-md bg-light navbar-light nav-fill fixed-top">
+   <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/120x60?text=LOGO"  aria-label="Home" ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown h-100">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Ways to Give <span class="caret"></span></a>
+          <ul class="dropdown-menu ml-auto">
+           <li class="nav-item align-self-center">
+        <a class="nav-link dropdown-item" href="#">Way to Give One</a>
+              </li>
+                 <li class="nav-item align-self-center">
+        <a class="nav-link dropdown-item" href="#">Way to Give Two</a>
+              </li>        
+          </ul>
+      </li>
+      <li class="nav-item dropdown h-100">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Your Impact<span class="caret"></span></a>
+          <ul class="dropdown-menu ml-auto">
+           <li class="nav-item align-self-center">
+        <a class="nav-link dropdown-item" href="#">Your Impact One</a>
+              </li>
+                 <li class="nav-item align-self-center">
+        <a class="nav-link dropdown-item" href="#">Your Impact Two</a>
+              </li>        
+          </ul>
+      </li> 
+          <li class="nav-item align-self-center oneline">
+        <a class="nav-link" href="#">Get Involved</a>
+      </li>    
+              <li class="nav-item align-self-center oneline ">
+        <a class="nav-link" href="#">News & Stories</a>
+      </li>    
+              <li class="nav-item align-self-center oneline">
+        <a class="nav-link" href="#">About Us </a>
+      </li> 
+            <li class="nav-item align-self-center oneline">
+        <a class="nav-link" href="#">Donate Now</a>
+      </li>    
+        
+
+    </ul>
+  </div>  
+</nav>
+  <!-- Page Content -->
+  
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="mt-5  text-center">A Bootstrap 4 Starter Template</h1>
+                            <p>Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+                            <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Bootstrap core JavaScript -->
+            <!-- External Scripts -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+            </script>
+
+        </body>
+
+</html>
