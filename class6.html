@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Instructions:
+1. Open this in a browser. 
+2. Go to caniuse.com and look up details element to check browser support. 
+3. Use the inspector to see what is making the blue outline on click. In the Chrome
+developer tools, click the ":hov" Toggle Element State control and click some of the options there to find the right 
+selector to use. 
+4. Uncomment out normalize.min.css to get that goodness.
+5. Gradually try to make it look like the screenshot below. 
+-IMPORTANT HINT: - Search for "css open attribute" to be able to target the opened up pane of th
+the details element. 
+
+
+-->
+
+
+    <title>Styling the Details Element</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <style>
+        details {
+            width: 80%;
+            margin: 1rem auto;
+            /* Code I added */
+            font-family: sans-serif;
+            background-color: #edeff1;
+            padding: 0.8rem 1rem;
+            border: 1px solid #6e8794;
+            box-shadow: 0px 2px 5px #ededed;
+            /*  */
+        }
+
+        details::before {
+            width: 100%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: inherit;
+            opacity: .15;
+            box-shadow: 0 .25em .5em #263238;
+            pointer-events: none;
+            -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+            z-index: -1;
+        }
+
+        details[open] {
+            background-color: #FFF;
+            padding-bottom: 1rem;
+            /* Code I added */
+            box-shadow: 0px 2px 8px #a3a3a3;
+            /*  */
+        }
+
+        details[open]::before {
+            opacity: .6;
+        }
+
+        summary {
+            padding: 1rem 2em 1rem 0;
+            display: block;
+            position: relative;
+            font-size: .85em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* summary:focus {
+            outline: none;
+        } */
+
+        summary::before,
+        summary::after {
+            width: .75em;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            content: '';
+            background-color: currentColor;
+            text-align: right;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: -webkit-transform .2s ease-in-out;
+            transition: -webkit-transform .2s ease-in-out;
+            transition: transform .2s ease-in-out;
+            transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+        }
+
+        summary::after {
+            -webkit-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        [open] summary::after {
+            -webkit-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <details>
+        <summary>Frequently Asked Question 1</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <details>
+        <summary>Frequently Asked Question 2</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <details>
+        <summary>Frequently Asked Question 3</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <details>
+        <summary>Frequently Asked Question 4</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <details>
+        <summary>Frequently Asked Question 5</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <details>
+        <summary>Frequently Asked Question 6</summary>
+        Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.
+
+    </details>
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>
